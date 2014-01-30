@@ -13,16 +13,19 @@ public class TestVector {
     int numero=2;
     int nuevo[]= new int [5];
     llenarVector(nuevo);
-     System.out.print("vector:");
+     System.out.print("vector:"+"\n");
     imprimir(nuevo);
     
     int v[]=addFinal(nuevo, numero);
-    System.out.print("el vector con la nueva posicion es:");
+    System.out.print("\n"+"el vector con la nueva posición es:");
     imprimir(v);
     
     int y[]=addInicio(nuevo, numero);
-    System.out.print("el vector addInicio es:");
+    System.out.print("\n"+"el vector addInicio es:");
     imprimir(y);
+    sort(nuevo);
+    System.out.print("\n"+"el vector ordenado ascendentemente:");
+    imprimir(nuevo);
      
     
     
@@ -56,6 +59,25 @@ public class TestVector {
         return v;
 
     }
+   /**
+    * Metodo que ordena los elementos del vector ascendentemente
+    * @param v: recibe un vector de tipo entero como parámetro 
+    */
+   public static void sort (int v[]){
+       
+       int aux=0;
+       for (int i=0; i<v.length;i++){
+           for (int j=i+1;j<v.length;j++){
+               if (v[j]<v[i]){
+                   aux=v[i];
+                   v[i]=v[j];
+                   v[j]=aux;
+               }
+               
+           }
+       }
+       
+   }
       public static  void imprimir (int v[]){
             System.out.print(toString(v));
       }
