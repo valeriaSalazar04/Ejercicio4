@@ -11,7 +11,7 @@ public class TestVector {
     
     public static void main (String ars[]){
     int numero=2;
-    int nuevo[]= new int [5];
+    int nuevo[]= {1,2,3,5,6};
     llenarVector(nuevo);
      System.out.print("vector:"+"\n");
     imprimir(nuevo);
@@ -26,6 +26,9 @@ public class TestVector {
     sort(nuevo);
     System.out.print("\n"+"el vector ordenado ascendentemente:");
     imprimir(nuevo);
+    int x[]=addOrdenado(nuevo,4 );
+    System.out.print("\n"+"prueba:");
+    imprimir(x);
      
     
     
@@ -78,6 +81,16 @@ public class TestVector {
        }
        
    }
+   /**
+    * vector de enteros de N elementos, los elementos se encuentran ordenados ascendentemente se debe insertar un dato X en el vector de tal manera que el vector siga quedando ordenado ascendentemente.
+    * @param v: vector de tipo entero donde se encuentran ordenados ascendentemente los datos
+    * @param dato: dato que se va ingresar al vector de forma ordenanda 
+    */
+   public static int [] addOrdenado (int v[], int dato){
+      
+       return ;
+       
+   }
       public static  void imprimir (int v[]){
             System.out.print(toString(v));
       }
@@ -98,5 +111,12 @@ public class TestVector {
 
         }
     }
+        public static void copiar (int v[], int v2[]){
+            
+            for (int i=0;i<v.length;i++){
+                v2[i]=v[i];
+            }
+            
+        }
       
 }
